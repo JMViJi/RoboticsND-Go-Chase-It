@@ -3,12 +3,12 @@
 <robot name="my_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
 
-  <xacro:property name="wheel_radius" value="0.075" />
-  <xacro:property name="wheel_length" value="0.05" />
-  <xacro:property name="wheel_mass" value="5" />
+<xacro:property name="wheel_radius" value="0.075" />
+<xacro:property name="wheel_length" value="0.05" />
+<xacro:property name="wheel_mass" value="5" />
 
 
-<xacro:include filename="/home/robond/workspace/catkin_ws/src/my_robot/urdf/my_robot.gazebo" />
+<xacro:include filename="$(find my_robot)/urdf/my_robot.gazebo" />
 
 
  <link name="robot_footprint"></link>
@@ -73,9 +73,7 @@
         <sphere radius="0.05"/>
       </geometry>
     </visual>
-
   </link>
-
 
 	<gazebo reference="chassis">
 		<material>Gazebo/Blue</material>
@@ -213,7 +211,6 @@
       <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6"/>
     </inertial>
 
-
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>      
       <geometry>
@@ -227,7 +224,6 @@
         <box size="0.1 0.1 0.1"/>
       </geometry>
     </collision>
-
   </link>
 
   <joint type="fixed" name="hokuyo_joint">
@@ -236,10 +232,9 @@
     <child link="hokuyo"/>
     <axis xyz="0 1 0" rpy="0 0 0"/>
   </joint>
-
-	<gazebo reference="hokuyo">
+  
+  <gazebo reference="hokuyo">
 		<material>Gazebo/Black</material>
 	</gazebo>
-
 
 </robot>

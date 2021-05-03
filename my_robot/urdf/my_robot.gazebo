@@ -8,8 +8,8 @@
       <updateRate>10</updateRate>
       <leftJoint>left_wheel_hinge</leftJoint>
       <rightJoint>right_wheel_hinge</rightJoint>
-      <wheelSeparation>0.62</wheelSeparation>
-      <wheelDiameter>0.15</wheelDiameter>
+      <wheelSeparation>0.4</wheelSeparation>
+      <wheelDiameter>0.2</wheelDiameter>
       <torque>10</torque>
       <commandTopic>cmd_vel</commandTopic>
       <odometryTopic>odom</odometryTopic>
@@ -25,8 +25,6 @@
       <publishOdomTF>true</publishOdomTF>
     </plugin>
   </gazebo>
-
-
 
   <!-- camera -->
   <gazebo reference="camera">

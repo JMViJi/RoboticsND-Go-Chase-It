@@ -1,10 +1,9 @@
 #include "ros/ros.h"
 #include "geometry_msgs/Twist.h"
-#include <std_msgs/Float64.h>
 #include "ball_chaser/DriveToTarget.h"
 
+// ROS::Publisher motor commands;
 ros::Publisher motor_command_publisher;
-
 
 bool handle_drive_request(ball_chaser::DriveToTarget::Request& req, ball_chaser::DriveToTarget::Response& res)
 {
@@ -14,8 +13,10 @@ bool handle_drive_request(ball_chaser::DriveToTarget::Request& req, ball_chaser:
     // Create a motor_command object of type geometry_msgs::Twist
     geometry_msgs::Twist motor_command;
 
+    // Set wheel velocities
     motor_command.linear.x = req.linear_x;
     motor_command.angular.z = req.angular_z;
+
     // Publish angles to drive the robot
     motor_command_publisher.publish(motor_command);
 
