@@ -12,6 +12,8 @@ The robot follows the roomba style, so that it's a two-wheeled robot with two ca
 
 ![Robot](r1.png)
 
+![Robot Img2](r2.png)
+
 ## File structure
 
 ## Results
