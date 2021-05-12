@@ -10,6 +10,8 @@ For this project my_world has totally changed, been replaced the factory world e
 ### Robot
 The robot follows the roomba style, so that it's a two-wheeled robot with two castor spheres, each one in the front and back to stabilise it.
 
+![Robot](r1.png)
+
 ## File structure
 
 ## Results
